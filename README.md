@@ -1,2 +1,2 @@
-# 02---passwordGenerator
+# 02-passwordGenerator
 Week 3 Homework
