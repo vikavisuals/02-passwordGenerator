@@ -31,8 +31,11 @@ function generatePassword() {
 
   // Makes the user input turn into a number, versus a string
   const passLength = parseInt(document.getElementById("passLength").value);
+  const $lowerChecked = (document.getElementById("lowerBox").checked);
+  const $upperChecked = (document.getElementById("upperBox").checked);
 
-  if (document.getElementById("lowerBox").checked) {
+  // Is lowercase checkbox activated
+  if ($lowerChecked) {
     for (i = 0; i < passLength; i++) {
       randomLowerCase += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
       // lowerCase.length is a number of 26
@@ -41,7 +44,8 @@ function generatePassword() {
     console.log("not checked");
   }
 
-  if (document.getElementById("upperBox").checked) {
+  // Is uppercase checkbox activated
+  if ($upperChecked) {
     for (i = 0; i < passLength; i++) {
       randomUpperCase += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
 
@@ -50,7 +54,8 @@ function generatePassword() {
     console.log("not checked");
  }
 
- if ((document.getElementById("lowerBox").checked) && (document.getElementById("upperBox").checked)) {
+ // Are both upper and lowercase checkboxes activated
+ if (($lowerChecked) && ($upperChecked)) {
    randomPassword = randomLowerCase + randomUpperCase;
  } else {
    console.log("Both are not checked");
