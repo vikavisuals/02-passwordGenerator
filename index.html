@@ -25,9 +25,26 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" class="btn" onClick="generatePassword();">Generate Password</button>
         </div>
       </div>
+
+      <div>How many characters would you like?
+<input type="text" id="userAmountBox"></div>
+
+<br>
+    <label for="lowerCaseBox">
+        <input type="checkbox" id="lowerCaseBox">Lowercase Letters</label>
+<br>
+    <label for="upperCaseBox">
+        <input type="checkbox" id="upperCaseBox">Uppercase Letters</label>
+
+
+    <!-- <label for="numbersBox">
+        <input type="checkbox" id="numbersBox">Numbers</label>
+    <label for="symbolsBox">
+        <input type="checkbox" id="symbolsBox">Symbols</label> -->
+
     </div>
     <script src="script.js"></script>
   </body>
