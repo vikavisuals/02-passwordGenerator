@@ -36,7 +36,6 @@ function generatePassword() {
     for (i = 0; i < passLength; i++) {
       randomLowerCase += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
       // lowerCase.length is a number of 26
-
     }
   } else {
     console.log("not checked");
@@ -50,8 +49,18 @@ function generatePassword() {
   } else {
     console.log("not checked");
  }
- console.log(randomUpperCase);
- console.log(randomLowerCase);
+
+ if ((document.getElementById("lowerBox").checked) && (document.getElementById("upperBox").checked)) {
+   randomPassword = randomLowerCase + randomUpperCase;
+ } else {
+   console.log("Both are not checked");
+ }
+
+
+//  console.log(randomUpperCase);
+//  console.log(randomLowerCase);
+ console.log (randomPassword);
+ 
 }
 
 
