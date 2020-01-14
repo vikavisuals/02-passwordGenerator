@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <div class="card">
+
+      <div class="card-header">
         <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn" onClick="generatePassword();">Generate Password</button>
-        </div>
+      
       </div>
 
-      <div>How many characters would you like?
-<input type="text" id="userAmountBox"></div>
 
-<br>
-    <label for="lowerCaseBox">
-        <input type="checkbox" id="lowerCaseBox">Lowercase Letters</label>
-<br>
-    <label for="upperCaseBox">
-        <input type="checkbox" id="upperCaseBox">Uppercase Letters</label>
+      <div class="card-body">
+
+        <!-- <h4>Password Length: <span id="passLength">10</span></h4>
+        <button id="shorterPassword">Lower</button>
+        <button id="longerPassword">Higher</button> -->
 
 
-    <!-- <label for="numbersBox">
-        <input type="checkbox" id="numbersBox">Numbers</label>
-    <label for="symbolsBox">
-        <input type="checkbox" id="symbolsBox">Symbols</label> -->
+        <!-- Lower Case checkbox -->
+        <form>
+
+          <div>How many characters would you like?
+            <input type="text" id="passLength"></div>
+         <br>
+
+          <label for="lowerBox">
+            <input type="checkbox" id="lowerBox">Lowercase Letters</label>
+
+          <br>
+
+          <label for="upperBox">
+            <input type="checkbox" id="upperBox">Uppercase Letters</label>
+
+        </form>
+      </div>
+
+
+      <div class="card-footer">
+        <!-- Where generated password prints -->
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+
+        <br>
+
+        <!-- Generate password button -->
+        <button id="generate" class="btn" value="passLength">Generate Password</button>
+      </div>
 
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
 </html>
