@@ -13,8 +13,6 @@ function writePassword() {
 
   passwordText.value = password;
 
-
-
   // copyBtn.removeAttribute("disabled");
   // copyBtn.focus();
 }
@@ -29,6 +27,9 @@ function generatePassword() {
   let randomPassword = "";
   let randomLowerCase = "";
   let randomUpperCase = "";
+  let multiRandom = "";
+  let finalPassword = "";
+
 
   // Makes the user input turn into a number, versus a string
   const passLength = parseInt(document.getElementById("passLength").value);
@@ -39,7 +40,7 @@ function generatePassword() {
   if ($lowerChecked) {
     for (i = 0; i < passLength; i++) {
       randomLowerCase += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
-      randomPassword = randomLowerCase;
+      finalPassword = randomLowerCase;
     }
   } else {
     console.log("not checked");
@@ -49,7 +50,7 @@ function generatePassword() {
   if ($upperChecked) {
     for (i = 0; i < passLength; i++) {
       randomUpperCase += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
-      randomPassword = randomUpperCase;
+      finalPassword = randomUpperCase;
     }
   } else {
     console.log("not checked");
@@ -58,12 +59,19 @@ function generatePassword() {
   // Are both upper and lowercase checkboxes activated
   if (($lowerChecked) && ($upperChecked)) {
     randomPassword = randomLowerCase + randomUpperCase;
+    for (i = 0; i < passLength; i++) {
+      multiRandom += randomPassword.charAt(Math.floor(Math.random() * randomPassword.length));
+      finalPassword = multiRandom;
+    }
   } else {
     console.log("Both are not checked");
   }
 
-  console.log(randomPassword);
-  return randomPassword;
+
+
+  // console.log(randomPassword);
+  console.log(finalPassword);
+  return finalPassword;
 
 }
 
