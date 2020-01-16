@@ -27,7 +27,7 @@ function generatePassword() {
   const lowerCase = "abcdefghijklmnopqrstuvwxyz";
   const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "1234567890";
-  const symbols = "~`!@#$%^&*()_-+={}[]';:?.";
+  const symbols = "~`!@#$%^&*()_-+=[]';:?";
 
   // Buffer variables as a location for random passwords to be held
   let randomPassword = "";
