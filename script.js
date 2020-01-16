@@ -76,8 +76,6 @@ function generatePassword() {
   // Sets password length requirement
   if (passLength < 8 || passLength > 128) {
     finalPassword = "Password must be between 8 and 128 characters";
-  } else {
-    finalPassword = "Password length not entered";
   }
 
   // Final result of what running the function will produce
