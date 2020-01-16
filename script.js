@@ -10,7 +10,6 @@ function writePassword() {
 
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
   // copyBtn.removeAttribute("disabled");
@@ -19,14 +18,16 @@ function writePassword() {
 
 
 function generatePassword() {
+
+  // Arrays that will be randomly shuffled
   const lowerCase = "abcdefghijklmnopqrstuvwxyz";
   const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "1234567890";
-  const symbols = "~`!@#$%^&*()_-+={}[]";
+  const symbols = "~`!@#$%^&*()_-+={}[]';:?.";
   
+  // Buffer variables as a location for random passwords to be held
   let randomPassword = "";
   let finalPassword = "";
-
 
   // Makes the user input turn into a number, versus a string
   const passLength = parseInt(document.getElementById("passLength").value);
@@ -67,20 +68,20 @@ function generatePassword() {
   }
 }
 
+// Randomizes the various checkboxes compiled password, also sets length
 for (i = 0; i < passLength; i++) {
   finalPassword += randomPassword.charAt(Math.floor(Math.random() * randomPassword.length));
 }
 
+// Sets password length requirement
+if (passLength < 8 || passLength > 128) {
+  finalPassword = "Password must be between 8 and 128 characters"
+}
 
-
-
-  // console.log(randomPassword);
   console.log(finalPassword);
   return finalPassword;
 
 }
-
-
 
 
 
