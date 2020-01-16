@@ -33,15 +33,11 @@ function generatePassword() {
   let randomPassword = "";
   let finalPassword = "";
 
-  // Makes the user input turn into a number, versus a string
+  // Makes the user input password length turn into a number, versus a string
   const passLength = parseInt(document.getElementById("passLength").value);
-  const $lowerChecked = (document.getElementById("lowerBox").checked);
-  const $upperChecked = (document.getElementById("upperBox").checked);
-  const $numbersChecked = (document.getElementById("numbersBox").checked);
-  const $symbolsChecked = (document.getElementById("symbolsBox").checked);
 
   // Is lowercase checkbox activated
-  if ($lowerChecked) {
+  if (document.getElementById("lowerBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
 
@@ -49,7 +45,7 @@ function generatePassword() {
   }
 
   // Is uppercase checkbox activated
-  if ($upperChecked) {
+  if (document.getElementById("upperBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
 
@@ -57,7 +53,7 @@ function generatePassword() {
   }
 
   // Is numbers checkbox activated
-  if ($numbersChecked) {
+  if (document.getElementById("numbersBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
 
@@ -65,7 +61,7 @@ function generatePassword() {
   }
 
   // Is uppercase checkbox activated
-  if ($symbolsChecked) {
+  if (document.getElementById("symbolsBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += symbols.charAt(Math.floor(Math.random() * symbols.length));
 
