@@ -1,0 +1,92 @@
+/* Setting font for entire page */
+body {
+    font-family: 'Saira', sans-serif;
+}
+
+/* Card styling info */
+.card {
+    background-color: rgb(145, 145, 145);
+    width: 65%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+
+/* Main header font */
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(192, 15, 15);
+    color: white;
+    padding: 10px;
+}
+
+/* Area title font */
+h2 {
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+/* Check boxes alignment */
+.checkBoxes {
+    width: 215px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* Password length box info */
+#passLength {
+    width: 215px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+/* Generated password box info */
+#password {
+    width: 80%;
+    height: 190px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+/* Font size next to check boxes */
+label {
+    padding: 10px;
+    margin: 5px;
+    font-size: 30px;
+}
+
+/* Hide default checkbox */
+label input {
+  display: none;
+}
+
+/* Style the new checkbox */
+label span {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+}
+
+/* Style new checked state*/
+[type=checkbox]:checked + span:before {
+  content: '\2714';
+  position: absolute;
+  color:  rgb(192, 15, 15);
+  top: -5px;
+  left: 0;
+}

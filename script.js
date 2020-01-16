@@ -79,5 +79,6 @@ function generatePassword() {
   }
 
   // Final result of what running the function will produce
+  console.log(randomPassword);
   return finalPassword;
 }

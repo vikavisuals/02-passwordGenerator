@@ -2,82 +2,101 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Password Generator</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Password Generator</title>
+
+    
+    
+        <!-- Bootstrp CSS link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <!-- Reset file that erases all different browser default HTML -->
+        <link rel="stylesheet" href="reset.css">
+            
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Abel|Jura|Montserrat|Open+Sans|Rajdhani|Saira|Unica+One|Varela+Round&display=swap" rel="stylesheet">
+    
+        <!-- Linking CSS file to this HTML -->
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- font-family: 'Varela Round', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Unica One', cursive;
+        font-family: 'Saira', sans-serif;
+        font-family: 'Jura', sans-serif; =eh=
+        font-family: 'Abel', sans-serif;
+        font-family: 'Open Sans', sans-serif; -->
+
 </head>
 
 <body>
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <div class="card">
+        <div class="card">
 
-      <div class="card-header">
-        <h1>Password Generator</h1>
-      
-      </div>
-
-
-      <div class="card-body">
-
-        <!-- <h4>Password Length: <span id="passLength">10</span></h4>
-        <button id="shorterPassword">Lower</button>
-        <button id="longerPassword">Higher</button> -->
+            <div>
+                <h1>Password Generator</h1>
+            </div>
 
 
-        <!-- Lower Case checkbox -->
-        <form>
 
-          <div>How many characters would you like?
-              <br>
-            <input type="text" id="passLength"></div>
-         <br>
+            <form>
 
-          <label for="lowerBox">
-            <input type="checkbox" id="lowerBox">Lowercase Letters</label>
+                <div><h2>How many characters?</h2>
+                    <br>
+                    <input type="text" id="passLength"></div>
+                <br>
+            </form>
 
-          <br>
+            <form class="checkBoxes">
+                <label for="lowerBox">
+                    <input type="checkbox" id="lowerBox"><span></span>  Lowercase</label>
 
-            <label for="upperBox">
-            <input type="checkbox" id="upperBox">Uppercase Letters</label>
+               <br>
 
-            <br>
+                <label for="upperBox">
+                    <input type="checkbox" id="upperBox"><span></span>  Uppercase</label>
 
-            <label for="numbersBox">
-            <input type="checkbox" id="numbersBox">Numbers</label>
+               <br>
 
-            <br>
+                <label for="numbersBox">
+                    <input type="checkbox" id="numbersBox"><span></span>  Numbers</label>
 
-            <label for="symbolsBox">
-            <input type="checkbox" id="symbolsBox">Symbols</label>
+               <br>
 
-        </form>
-      </div>
+                <label for="symbolsBox">
+                    <input type="checkbox" id="symbolsBox"><span></span>  Symbols</label>
 
-<br><br>
+            </form>
 
-      <div class="card-footer">
-        <!-- Where generated password prints -->
-        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
 
-        <br>
+            <br><br>
 
-        <!-- Generate password button -->
-        <button id="generate" class="btn" value="passLength">Generate Password</button>
+            <div>
+                <!-- Where generated password prints -->
+                <textarea readonly id="password" placeholder="Your Secure Password"
+                    aria-label="Generated Password"></textarea>
 
-        <button id="copy" class="btn" value="passLength">Copy Password</button>
+                <br>
 
-      </div>
+                <!-- Generate password button -->
+                <button id="generate" class="btn" value="passLength">Generate Password</button>
 
+                <button id="copy" class="btn" value="passLength">Copy Password</button>
+
+            </div>
+
+        </div>
     </div>
-  </div>
 
 
 
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
