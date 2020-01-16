@@ -6,65 +6,68 @@ body {
 /* Card styling info */
 .card {
     background-color: rgb(145, 145, 145);
-    width: 65%;
+    width: 375px;
     text-align: center;
     display: block;
     margin: auto;
     margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 /* Main header font */
 h1 {
     font-weight: bold;
     font-size: 50px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    background-color: rgb(192, 15, 15);
+    background-color: rgb(63, 63, 63);
     color: white;
     padding: 10px;
+    margin-top: 20px;
 }
 
 /* Area title font */
 h2 {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 5%;
 }
 
 /* Check boxes alignment */
 .checkBoxes {
-    width: 215px;
+    width: 170px;
     text-align: left;
     margin: 0 auto;
 }
 
 /* Password length box info */
 #passLength {
-    width: 215px;
+    width: 170px;
     height: 40px;
     text-align: center;
     font-size: 25px;
     border-radius: 5px;
     outline: none;
     border: none;
+    color: rgb(192, 15, 15);
 }
 
 /* Generated password box info */
 #password {
     width: 80%;
-    height: 190px;
+    height: 230px;
     text-align: center;
     line-height: 30px;
     font-size: 25px;
     border-radius: 5px;
     outline: none;
     border: none;
+    color: rgb(192, 15, 15);
 }
 
 /* Font size next to check boxes */
 label {
-    padding: 10px;
+    padding: 5px;
     margin: 5px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /* Hide default checkbox */
@@ -86,7 +89,27 @@ label span {
 [type=checkbox]:checked + span:before {
   content: '\2714';
   position: absolute;
-  color:  rgb(192, 15, 15);
+  color: rgb(192, 15, 15);
   top: -5px;
   left: 0;
+}
+
+#generate {
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(192, 15, 15);
+    color: white;
+    margin: 10px;
+}
+
+#copy {
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    margin: 10px;
 }
