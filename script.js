@@ -39,7 +39,7 @@ function generatePassword() {
   if ($lowerChecked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
-      finalPassword = randomPassword;
+
     }
   }
 
@@ -47,7 +47,7 @@ function generatePassword() {
   if ($upperChecked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
-      finalPassword = randomPassword;
+ 
     }
   }
 
@@ -55,7 +55,7 @@ function generatePassword() {
  if ($numbersChecked) {
   for (i = 0; i < passLength; i++) {
     randomPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
-    finalPassword = randomPassword;
+
   }
 }
 
@@ -63,21 +63,14 @@ function generatePassword() {
  if ($symbolsChecked) {
   for (i = 0; i < passLength; i++) {
     randomPassword += symbols.charAt(Math.floor(Math.random() * symbols.length));
-    finalPassword = randomPassword;
+
   }
 }
 
+for (i = 0; i < passLength; i++) {
+  finalPassword += randomPassword.charAt(Math.floor(Math.random() * randomPassword.length));
+}
 
-  // // Are both upper and lowercase checkboxes activated
-  // if (($lowerChecked) && ($upperChecked)) {
-  //   randomPassword = randomLowerCase + randomUpperCase;
-  //   for (i = 0; i < passLength; i++) {
-  //     multiRandom += randomPassword.charAt(Math.floor(Math.random() * randomPassword.length));
-  //     finalPassword = multiRandom;
-  //   }
-  // } else {
-  //   console.log("Both are not checked");
-  // }
 
 
 
