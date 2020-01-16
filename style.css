@@ -61,6 +61,7 @@ h2 {
     outline: none;
     border: none;
     color: rgb(192, 15, 15);
+    margin-bottom: 10px;
 }
 
 /* Font size next to check boxes */
