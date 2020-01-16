@@ -16,8 +16,8 @@ $copyBtn.addEventListener("click", copyPassword);
 // Copy existing text in password generating box, via id="password"
 function copyPassword() {
   let passwordText = document.querySelector("#password");
-  passwordText.select()
-  document.execCommand('copy')
+  passwordText.select();
+  document.execCommand('copy');
 }
 
 // Function that generates all needed elements for writing a random password
@@ -75,7 +75,9 @@ function generatePassword() {
 
   // Sets password length requirement
   if (passLength < 8 || passLength > 128) {
-    finalPassword = "Password must be between 8 and 128 characters"
+    finalPassword = "Password must be between 8 and 128 characters";
+  } else {
+    finalPassword = "Password length not entered";
   }
 
   // Final result of what running the function will produce
