@@ -8,79 +8,81 @@
 
     <title>Password Generator</title>
 
+    <!-- Reset file that erases all different browser default HTML -->
+    <link rel="stylesheet" href="reset.css">
+
     <!-- Bootstrp CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Reset file that erases all different browser default HTML -->
-    <link rel="stylesheet" href="reset.css">
-
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Abel|Jura|Montserrat|Open+Sans|Rajdhani|Saira|Unica+One|Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
+    <!-- font-family: 'Saira', sans-serif; -->
 
     <!-- Linking CSS file to this HTML -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- font-family: 'Varela Round', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Rajdhani', sans-serif;
-    font-family: 'Unica One', cursive;
-    font-family: 'Saira', sans-serif;
-    font-family: 'Jura', sans-serif; =eh=
-    font-family: 'Abel', sans-serif;
-    font-family: 'Open Sans', sans-serif; -->
-
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="card">
 
-            <!-- Heading -->
-            <div>
-                <h1>Password Generator</h1>
-            </div>
+        <!-- Bootstrap -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
 
-            <!-- Text input for password length -->
-            <form>
-                <div>
-                    <h2>Password Length:</h2>
-                    <br>
-                    <input type="text" id="passLength">
+                    <div class="card">
+
+                        <!-- Heading -->
+                        <div>
+                            <h1>Password Generator</h1>
+                        </div>
+
+                        <!-- Text input for password length -->
+                        <form>
+                            <div>
+                                <h2>Password Length:</h2>
+                                <input type="text" id="passLength">
+                            </div>
+                        </form>
+
+                        <br>
+
+                        <!-- Checkboxes for character options -->
+                        <form class="checkBoxes">
+                            <label for="lowerBox">
+                                <input type="checkbox" id="lowerBox"><span></span> Lowercase</label>
+                            <br>
+                            <label for="upperBox">
+                                <input type="checkbox" id="upperBox"><span></span> Uppercase</label>
+                            <br>
+                            <label for="numbersBox">
+                                <input type="checkbox" id="numbersBox"><span></span> Numbers</label>
+                            <br>
+                            <label for="symbolsBox">
+                                <input type="checkbox" id="symbolsBox"><span></span> Symbols</label>
+                        </form>
+
+                        <br>
+
+                        <div>
+                            <!-- Where generated password prints -->
+                            <textarea readonly id="password" placeholder="Your Secure Password"
+                                aria-label="Generated Password"></textarea>
+                            <br>
+                            <!-- Generate Password button -->
+                            <button id="generate" class="btn shadow-none" value="passLength">Generate Password</button>
+                            <br>
+                            <!-- Copy Password button -->
+                            <button id="copy" class="btn shadow-none" value="passLength">Copy Password</button>
+                        </div>
+
+                    </div>
+
                 </div>
-                <br>
-            </form>
-
-            <!-- Checkboxes for character options -->
-            <form class="checkBoxes">
-                <label for="lowerBox">
-                    <input type="checkbox" id="lowerBox"><span></span> Lowercase</label>
-                <br>
-                <label for="upperBox">
-                    <input type="checkbox" id="upperBox"><span></span> Uppercase</label>
-                <br>
-                <label for="numbersBox">
-                    <input type="checkbox" id="numbersBox"><span></span> Numbers</label>
-                <br>
-                <label for="symbolsBox">
-                    <input type="checkbox" id="symbolsBox"><span></span> Symbols</label>
-            </form>
-
-            <br>
-
-            <div>
-                <!-- Where generated password prints -->
-                <textarea readonly id="password" placeholder="Your Secure Password"
-                    aria-label="Generated Password"></textarea>
-                <br>
-                <!-- Generate Password button -->
-                <button id="generate" class="btn shadow-none" value="passLength">Generate Password</button>
-                <br>
-                <!-- Copy Password button -->
-                <button id="copy" class="btn shadow-none" value="passLength">Copy Password</button>
             </div>
-
         </div>
+
     </div>
 
     <script src="script.js"></script>

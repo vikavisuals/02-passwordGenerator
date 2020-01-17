@@ -40,7 +40,6 @@ function generatePassword() {
   if (document.getElementById("lowerBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
-
     }
   }
 
@@ -48,7 +47,6 @@ function generatePassword() {
   if (document.getElementById("upperBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
-
     }
   }
 
@@ -56,7 +54,6 @@ function generatePassword() {
   if (document.getElementById("numbersBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
-
     }
   }
 
@@ -64,7 +61,6 @@ function generatePassword() {
   if (document.getElementById("symbolsBox").checked) {
     for (i = 0; i < passLength; i++) {
       randomPassword += symbols.charAt(Math.floor(Math.random() * symbols.length));
-
     }
   }
 
@@ -79,6 +75,7 @@ function generatePassword() {
   }
 
   // Final result of what running the function will produce
-  console.log(randomPassword);
   return finalPassword;
+
+// Closing tag for generatePassword function  
 }

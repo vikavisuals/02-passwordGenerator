@@ -9,6 +9,7 @@ Instead of using prompts and alerts, which this assignment called for, I decided
 
 - Text box to type in password length
 - Check boxes to select what type of characters user would like in the random password
+- Limitation prompt on how many characters are required for password length
 - ReadOnly password generating text field
 - Copy Password button
 

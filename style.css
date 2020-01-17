@@ -6,7 +6,7 @@ body {
 /* Card styling info */
 .card {
     background-color: rgb(145, 145, 145);
-    width: 375px;
+    width: 70%;
     text-align: center;
     display: block;
     margin: auto;
@@ -18,7 +18,7 @@ body {
 /* Main header font */
 h1 {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 38px;
     background-color: rgb(63, 63, 63);
     color: white;
     padding: 10px;
@@ -27,13 +27,13 @@ h1 {
 
 /* Area title font */
 h2 {
-    font-size: 25px;
-    margin-top: 5%;
+    font-size: 22px;
+    margin-top: 20px;
 }
 
 /* Check boxes alignment */
 .checkBoxes {
-    width: 170px;
+    width: 135px;
     text-align: left;
     margin: 0 auto;
 }
@@ -43,7 +43,7 @@ h2 {
     width: 170px;
     height: 40px;
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -56,7 +56,7 @@ h2 {
     height: 230px;
     text-align: center;
     line-height: 30px;
-    font-size: 25px;
+    font-size: 22px;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -66,37 +66,36 @@ h2 {
 
 /* Font size next to check boxes */
 label {
-    padding: 5px;
-    margin: 5px;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 /* Hide default checkbox */
 label input {
-  display: none;
+    display: none;
 }
 
 /* Style the new checkbox */
 label span {
-  height: 20px;
-  width: 20px;
-  background-color: rgb(255, 255, 255);
-  display: inline-block;
-  position: relative;
-  border-radius: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
 }
 
 /* Style new checked state*/
 [type=checkbox]:checked + span:after {
-  content: 'X';
-  position: absolute;
-  color: rgb(192, 15, 15);
-  top: -3px;
-  left: 2px;
+    content: 'X';
+    position: absolute;
+    color: rgb(192, 15, 15);
+    top: -6px;
+    left: 2px;
 }
 
+/* Generate password button */
 #generate {
-    font-size: 25px;
+    font-size: 22px;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -105,8 +104,9 @@ label span {
     margin: 10px;
 }
 
+/* Copy password button */
 #copy {
-    font-size: 25px;
+    font-size: 22px;
     border-radius: 5px;
     outline: none;
     border: none;
