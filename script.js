@@ -32,6 +32,7 @@ function generatePassword() {
   // Buffer variables as a location for random passwords to be held
   let randomPassword = "";
   let finalPassword = "";
+  let guaranteedPassword = "";
 
   // Makes the user input password length turn into a number, versus a string
   const passLength = parseInt(document.getElementById("passLength").value);
@@ -41,6 +42,7 @@ function generatePassword() {
     for (i = 0; i < passLength; i++) {
       randomPassword += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
     }
+    guaranteedPassword += randomPassword[randomPassword.length - 1];
   }
 
   // Is uppercase checkbox activated
@@ -48,6 +50,7 @@ function generatePassword() {
     for (i = 0; i < passLength; i++) {
       randomPassword += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
     }
+    guaranteedPassword += randomPassword[randomPassword.length - 1];
   }
 
   // Is numbers checkbox activated
@@ -55,6 +58,7 @@ function generatePassword() {
     for (i = 0; i < passLength; i++) {
       randomPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
     }
+    guaranteedPassword += randomPassword[randomPassword.length - 1];
   }
 
   // Is uppercase checkbox activated
@@ -62,6 +66,7 @@ function generatePassword() {
     for (i = 0; i < passLength; i++) {
       randomPassword += symbols.charAt(Math.floor(Math.random() * symbols.length));
     }
+    guaranteedPassword += randomPassword[randomPassword.length - 1];
   }
 
   // Randomizes the various checkboxes compiled password, also sets length
@@ -74,8 +79,16 @@ function generatePassword() {
     finalPassword = "Password must be between 8 and 128 characters";
   }
 
-  // Final result of what running the function will produce
-  return finalPassword;
+  // Adds a character from each checked box to the password, to ensure those selections always appear
+  finalPassword = guaranteedPassword + finalPassword;
 
-// Closing tag for generatePassword function  
+  // Removes any additional characters from the end of the final password, to match user input length
+  finalPassword = finalPassword.slice(0, passLength);
+
+  // Final result of what running the function will produce
+  console.log(guaranteedPassword);
+  console.log(finalPassword);
+
+  return finalPassword;
+  // Closing tag for generatePassword function  
 }

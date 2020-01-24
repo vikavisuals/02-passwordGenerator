@@ -12,9 +12,7 @@ Instead of using prompts and alerts, which this assignment called for, I decided
 - Limitation prompt on how many characters are required for password length
 - ReadOnly password generating text field
 - Copy Password button
-
-## Work in Progress
-Occasionally, password will not show all checkmarked selections. This is because a random X-length password is created when all checkmarked selections are made, and randomized again with all these elements as a new string, (Ex: Taking arr1 = "abc" and arr2 = "123" and creating arr3 = "b1a3c2") which coincidentally can create the issue of not having the desired result 100% of the time. Once I discover a method of setting a specific required percentage for each included array, I'll return and implement a fix.
+- Script written to ensure at least one character from each selected checkbox appears in the generated password
 
 ## Copywrite
 © Victoria Kaszuba - 2020

@@ -2,102 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Password Generator</title>
+  <title>Password Generator</title>
 
-    <!-- Reset file that erases all different browser default HTML -->
-    <link rel="stylesheet" href="reset.css">
+  <!-- Reset file that erases all different browser default HTML -->
+  <link rel="stylesheet" href="reset.css">
 
-    <!-- Bootstrp CSS link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Bootstrp CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
-    <!-- font-family: 'Saira', sans-serif; -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
+  <!-- font-family: 'Saira', sans-serif; -->
 
-    <!-- Linking CSS file to this HTML -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Linking CSS file to this HTML -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
 
-        <!-- Bootstrap -->
-        <div class="container">
-            <div class="row">
-                <div class="col">
+    <!-- Bootstrap -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
 
-                    <div class="card">
+          <div class="card">
 
-                        <!-- Heading -->
-                        <div>
-                            <h1>Password Generator</h1>
-                        </div>
-
-                        <!-- Text input for password length -->
-                        <form>
-                            <div>
-                                <h2>Password Length:</h2>
-                                <input type="text" id="passLength">
-                            </div>
-                        </form>
-
-                        <br>
-
-                        <!-- Checkboxes for character options -->
-                        <form class="checkBoxes">
-                            <label for="lowerBox">
-                                <input type="checkbox" id="lowerBox"><span></span> Lowercase</label>
-                            <br>
-                            <label for="upperBox">
-                                <input type="checkbox" id="upperBox"><span></span> Uppercase</label>
-                            <br>
-                            <label for="numbersBox">
-                                <input type="checkbox" id="numbersBox"><span></span> Numbers</label>
-                            <br>
-                            <label for="symbolsBox">
-                                <input type="checkbox" id="symbolsBox"><span></span> Symbols</label>
-                        </form>
-
-                        <br>
-
-                        <div>
-                            <!-- Where generated password prints -->
-                            <textarea readonly id="password" placeholder="Your Secure Password"
-                                aria-label="Generated Password"></textarea>
-                            <br>
-                            <!-- Generate Password button -->
-                            <button id="generate" class="btn shadow-none" value="passLength">Generate Password</button>
-                            <br>
-                            <!-- Copy Password button -->
-                            <button id="copy" class="btn shadow-none" value="passLength">Copy Password</button>
-                        </div>
-
-                    </div>
-
-                </div>
+            <!-- Heading -->
+            <div>
+              <h1>Password Generator</h1>
             </div>
-        </div>
 
+            <!-- Text input for password length -->
+            <form>
+              <div>
+                <h2>Password Length:</h2>
+                <input type="text" id="passLength">
+              </div>
+            </form>
+
+            <br>
+
+            <!-- Checkboxes for character options -->
+            <form class="checkBoxes">
+              <label for="lowerBox">
+                <input type="checkbox" id="lowerBox"><span></span> Lowercase</label>
+              <br>
+              <label for="upperBox">
+                <input type="checkbox" id="upperBox"><span></span> Uppercase</label>
+              <br>
+              <label for="numbersBox">
+                <input type="checkbox" id="numbersBox"><span></span> Numbers</label>
+              <br>
+              <label for="symbolsBox">
+                <input type="checkbox" id="symbolsBox"><span></span> Symbols</label>
+            </form>
+
+            <br>
+
+            <div>
+              <!-- Where generated password prints -->
+              <textarea readonly id="password" placeholder="Your Secure Password"
+                aria-label="Generated Password"></textarea>
+              <br>
+              <!-- Generate Password button -->
+              <button id="generate" class="btn shadow-none" value="passLength">Generate Password</button>
+              <br>
+              <!-- Copy Password button -->
+              <button id="copy" class="btn shadow-none" value="passLength">Copy Password</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
 
-    <!-- Linked JavaScript file -->
-    <script src="script.js"></script>
+  </div>
 
-    <!-- Bootstrap JS and JQuery links-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+  <!-- Linked JavaScript file -->
+  <script src="script.js"></script>
+
+  <!-- Bootstrap JS and JQuery links-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 </body>
 
