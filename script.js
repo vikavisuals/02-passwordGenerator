@@ -86,9 +86,7 @@ function generatePassword() {
   finalPassword = finalPassword.slice(0, passLength);
 
   // Final result of what running the function will produce
-  console.log(guaranteedPassword);
-  console.log(finalPassword);
-
   return finalPassword;
+
   // Closing tag for generatePassword function  
 }
