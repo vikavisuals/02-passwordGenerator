@@ -74,16 +74,17 @@ function generatePassword() {
     finalPassword += randomPassword.charAt(Math.floor(Math.random() * randomPassword.length));
   }
 
-  // Sets password length requirement
-  if (passLength < 8 || passLength > 128) {
-    finalPassword = "Password must be between 8 and 128 characters";
-  }
-
   // Adds a character from each checked box to the password, to ensure those selections always appear
   finalPassword = guaranteedPassword + finalPassword;
 
   // Removes any additional characters from the end of the final password, to match user input length
   finalPassword = finalPassword.slice(0, passLength);
+
+  
+  // Sets password length requirement
+  if (passLength < 8 || passLength > 128) {
+    finalPassword = "Password must be between 8 and 128 characters";
+  }
 
   // Final result of what running the function will produce
   return finalPassword;
